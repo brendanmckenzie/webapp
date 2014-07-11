@@ -10,6 +10,7 @@ head(ng-app="webapp")
     title Web App - Loading...
 
     link(href='#{CDN_ROOT}site.css', rel='stylesheet')
+    script(src='#{CDN_ROOT}site.init.js')
 
     //if lt IE 9
         script(src='#{CDN_ROOT}html5shiv.js')
