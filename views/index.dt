@@ -1,0 +1,21 @@
+doctype 5
+html(lang='en')
+head(ng-app="webapp")
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='')
+    meta(name='author', content='webapp')
+    meta(name='copyright', content='Copyright (c) 2014 webapp')
+    link(rel='shortcut icon', href='#{CDN_ROOT}favicon.png')
+    title Web App - Loading...
+
+    link(href='#{CDN_ROOT}site.css', rel='stylesheet')
+
+    //if lt IE 9
+        script(src='#{CDN_ROOT}html5shiv.js')
+        script(src='#{CDN_ROOT}respond.min.js')
+body
+    h1 Web App Started Template.
+    p Nothing to see here, but this is where the magic can happen.
+
+    script(src='#{CDN_ROOT}site.js')

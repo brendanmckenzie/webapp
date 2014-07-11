@@ -1,0 +1,1 @@
+This is where all resources that will eventually be hosted on the CDN go.

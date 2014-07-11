@@ -1,0 +1,27 @@
+{
+	"name": "webapp",
+	"description": "A simple vibe.d server application.",
+	"copyright": "Copyright © 2014, Brendan",
+	"authors": ["Brendan"],
+	"dependencies": {
+		"vibe-d": "~>0.7.19"
+	},
+	"configurations": [
+		{
+			"name": "development",
+			"targetType": "executable",
+			"versions": ["development"]
+		},
+		{
+			"name": "staging",
+			"targetType": "executable",
+			"versions": ["staging"]
+		},
+		{
+			"name": "production",
+			"targetType": "executable",
+			"versions": ["production"]
+		}
+	],
+	"versions": ["VibeDefaultMain"]
+}
