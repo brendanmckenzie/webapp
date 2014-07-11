@@ -1,1 +1,6 @@
-site.*
+site.css
+site.css.map
+site.init.js
+site.init.js.map
+site.js
+site.js.map
