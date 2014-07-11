@@ -11,6 +11,10 @@ angular.module('WebApp', ['ui.router', 'WebApp.Controllers'])
 		url: '/',
 		templateUrl: CDN_ROOT + '/views/home.html',
 		controller: 'HomeCtrl'
+	})
+	.state('about', {
+		url: '/about',
+		templateUrl: CDN_ROOT + '/views/about.html'
 	});
 
 }]);
