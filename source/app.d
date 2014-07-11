@@ -21,5 +21,6 @@ shared static this()
 
 void home(HTTPServerRequest req, HTTPServerResponse res)
 {
+	res.headers["Access-Control-Allow-Origin"] = CDN_ROOT ~ "*";
 	res.render!("index.dt", CDN_ROOT);
 }
