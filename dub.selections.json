@@ -1,9 +1,10 @@
 {
 	"fileVersion": 1,
 	"versions": {
-		"vibe-d": "0.7.20",
+		"vibe-d": "~master",
 		"libevent": "~master",
 		"openssl": "~master",
-		"libev": "~master"
+		"libev": "~master",
+		"poodinis": "~master"
 	}
 }

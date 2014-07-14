@@ -1,25 +1,33 @@
 import vibe.d;
 
+import webapp.session;
+import webapp.api.auth;
+
 version (development) {
-	const string CDN_ROOT = "http://localhost:8081/";
+	const CDN_ROOT = "http://localhost:8081/";
 }
 version (staging) {
-	const string CDN_ROOT = "http://cdn-staging.webapp.com/";
+	const CDN_ROOT = "http://cdn-staging.webapp.com/";
 }
 version (production) {
-	const string CDN_ROOT = "http://cdn.webapp.com/";
+	const CDN_ROOT = "http://cdn.webapp.com/";
 }
 
-shared static this()
-{
+// app
+
+shared static this() {
+	auto routes = new URLRouter;
+	routes.any("*", &checkSession);
+	routes.registerRestInterface(new AuthApi);
+	routes.get("/", &home);
+
 	auto settings = new HTTPServerSettings;
 	settings.port = 8080;
-	listenHTTP(settings, &home);
+	listenHTTP(settings, routes);
 
 	logInfo("webapp now running.");
 }
 
-void home(HTTPServerRequest req, HTTPServerResponse res)
-{
+void home(HTTPServerRequest req, HTTPServerResponse res) {
 	res.render!("index.dt", CDN_ROOT);
 }
