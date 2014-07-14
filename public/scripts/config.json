@@ -1,0 +1,9 @@
+{
+	"files_init": [
+		"init.js"
+	],
+	"files": [
+		"../vendor/angular-ui-router.js",
+		"app.js"
+	]
+}

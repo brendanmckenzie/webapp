@@ -1,6 +1,6 @@
 doctype 5
-html(lang='en')
-head(ng-app="webapp")
+html(lang='en', ng-app="WebApp")
+head
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(name='description', content='')
@@ -10,13 +10,14 @@ head(ng-app="webapp")
     title Web App - Loading...
 
     link(href='#{CDN_ROOT}site.css', rel='stylesheet')
+    script.
+        window.$cdn_root = '#{CDN_ROOT}'
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js')
     script(src='#{CDN_ROOT}site.init.js')
 
     //if lt IE 9
         script(src='#{CDN_ROOT}html5shiv.js')
-        script(src='#{CDN_ROOT}respond.min.js')
 body
-    h1 Web App Started Template.
-    p Nothing to see here, but this is where the magic can happen.
+    div(ui-view='')
 
     script(src='#{CDN_ROOT}site.js')
